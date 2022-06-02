@@ -7,4 +7,4 @@ ARG CONFIG_FILE=config.json
 COPY ${CONFIG_FILE} /conf/config.json
 
 WORKDIR /serve
-ENTRYPOINT ["virt/bin/python3", "src/run.py", "/conf/config.json"]
+ENTRYPOINT ["/serve/docker/run.sh", "/conf/config.json" ]
